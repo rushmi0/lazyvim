@@ -8,6 +8,16 @@
 -- use `vim.keymap.set` instead
 local map = LazyVim.safe_keymap_set
 
+-- <leader>tc
+map("n", "<leader>tc", function()
+    local themes = { "catppuccin", "gruvbox", "tokyonight", "everforest" }
+    local current_theme = vim.g.colors_name
+    local next_theme = themes[(vim.tbl_indexof(themes, current_theme) % #themes) + 1]
+
+    vim.cmd("colorscheme " .. next_theme)
+    print("Switched to theme: " .. next_theme)
+end, { desc = "Toggle Colorscheme" })
+
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
