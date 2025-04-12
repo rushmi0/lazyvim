@@ -32,7 +32,7 @@ return {
         "toml",
         "markdown",
         "ron",
-        "rust_with_rstml",
+        --"rust_with_rstml",
       },
 
       -- matchup = {
