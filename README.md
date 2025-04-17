@@ -38,13 +38,16 @@ Launch Neovim:
 
 ## 🚀 Movement
 
-| Key                  | Description                              | Mode |
-|----------------------|------------------------------------------|------|
-| `j / k`              | Move down/up (line wrap aware)           | n    |
-| `H / L`              | Move to top/bottom visible line          | n    |
-| `<Ctrl>h / j / k /l` | Move between splits                      | n    |
-| `<leader>o`          | Add new line below (stay in normal mode) | n    |
-| `<leader>O`          | Add new line above (stay in normal mode) | n    |
+| Key            | Description                              | Mode |
+|----------------|------------------------------------------|------|
+| `j`            | Move down (line wrap aware)              | n    |
+| `k`            | Move up (line wrap aware)                | n    |
+| `H`            | Move to top visible line                 | n    |
+| `L`            | Move to bottom visible line              | n    |
+| `<Ctrl><Move>` | Change cursor position                   | n    |
+| `<Ctrl>/`      | Open terminal                            | n    |
+| `<leader>o`    | Add new line below (stay in normal mode) | n    |
+| `<leader>O`    | Add new line above (stay in normal mode) | n    |
 
 ---
 
@@ -91,14 +94,15 @@ Launch Neovim:
 
 ## 🧠 Smart Features
 
-| Key          | Description                  | Mode |
-|--------------|------------------------------|------|
-| `<Esc>`      | Clear search highlight       | n    |
-| `<Ctrl> + a` | Select all                   | n    |
-| `+ / -`      | Increment / decrement number | n    |
-| `<leader>]`  | Go to next diagnostic        | n    |
-| `<leader>[`  | Go to previous diagnostic    | n    |
-| `<leader>i`  | Toggle LSP inlay hints       | n    |
+| Key         | Description               | Mode |
+|-------------|---------------------------|------|
+| `<Esc>`     | Clear search highlight    | n    |
+| `<Ctrl>a`   | Select all                | n    |
+| `+`         | Increment number          | n    |
+| `-`         | Decrement number          | n    |
+| `<leader>]` | Go to next diagnostic     | n    |
+| `<leader>[` | Go to previous diagnostic | n    |
+| `<leader>i` | Toggle LSP inlay hints    | n    |
 
 ---
 
