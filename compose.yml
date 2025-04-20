@@ -2,6 +2,7 @@ services:
 
   dotfile:
     container_name: dotfile
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile

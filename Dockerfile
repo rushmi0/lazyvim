@@ -16,12 +16,12 @@ RUN dnf install -y \
     unzip && \
     dnf clean all
 
-RUN mkdir -p /root/.local/share/fonts && \
-    curl -fLo /root/.local/share/fonts/JetBrainsMono.zip \
-    https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip && \
-    unzip /root/.local/share/fonts/JetBrainsMono.zip -d /root/.local/share/fonts/ && \
-    rm /root/.local/share/fonts/JetBrainsMono.zip && \
-    fc-cache -fv
+#RUN mkdir -p /root/.local/share/fonts && \
+#    curl -fLo /root/.local/share/fonts/JetBrainsMono.zip \
+#    https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip && \
+#    unzip /root/.local/share/fonts/JetBrainsMono.zip -d /root/.local/share/fonts/ && \
+#    rm /root/.local/share/fonts/JetBrainsMono.zip && \
+#    fc-cache -fv
 
 
 RUN mkdir -p /root/.config/nvim
