@@ -64,6 +64,7 @@ return {
             vim.treesitter.language.register("markdown", "mdx")
         end,
     },
+
     {
         "rayliwell/tree-sitter-rstml",
         dependencies = { "nvim-treesitter" },
@@ -72,6 +73,7 @@ return {
             require("tree-sitter-rstml").setup()
         end
     },
+
     -- Automatic tag closing and renaming (optional but highly recommended)
     {
         "windwp/nvim-ts-autotag",
@@ -79,6 +81,5 @@ return {
             require("nvim-ts-autotag").setup()
         end,
     },
-
 
 }
