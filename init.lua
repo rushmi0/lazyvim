@@ -7,4 +7,7 @@ _G.dd = function(...)
 end
 vim.print = _G.dd
 
+if vim.g.neovide then
+	vim.o.guifont = "ComicShannsMono Nerd Font Mono:h16"
+end
 require("config.lazy")

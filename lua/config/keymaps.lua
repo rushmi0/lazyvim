@@ -50,6 +50,10 @@ keymap.set("n", "<Leader>D", '"_D')
 keymap.set("v", "<Leader>d", '"_d')
 keymap.set("v", "<Leader>D", '"_D')
 
+-- Delete a word (inner word) without yanking
+keymap.set("n", "diw", '"_diw', { noremap = true, silent = true })
+
+
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
 keymap.set("n", "x", '"_x')

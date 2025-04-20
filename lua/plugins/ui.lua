@@ -170,6 +170,17 @@ return {
    ]],
                 },
             },
+            indent = { enabled = false },
+            input = { enabled = false },
+            notifier = { enabled = false },
+            scope = { enabled = false },
+            scroll = { enabled = false },
+            words = { enabled = false },
+        },
+        keys = {
+            { "<leader><space>", false },
+            { "<leader>/", false },
         },
     },
+
 }
