@@ -39,7 +39,6 @@ keymap.set("n", "<ESC>", "<cmd> noh <CR>")
 -- ===============================
 
 -- Prevent yanking on delete/change/paste
-keymap.set("n", "x", '"_x')
 keymap.set("n", "<Leader>p", '"0p')
 keymap.set("n", "<Leader>P", '"0P')
 keymap.set("v", "<Leader>p", '"0p')
@@ -47,14 +46,14 @@ keymap.set("n", "<Leader>c", '"_c')
 keymap.set("n", "<Leader>C", '"_C')
 keymap.set("v", "<Leader>c", '"_c')
 keymap.set("v", "<Leader>C", '"_C')
-keymap.set("n", "<Leader>d", '"_d')
 keymap.set("n", "<Leader>D", '"_D')
 keymap.set("v", "<Leader>d", '"_d')
 keymap.set("v", "<Leader>D", '"_D')
-keymap.set("v", "d", '"_d')
 
--- Delete word backward
+-- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
+keymap.set("n", "x", '"_x')
+keymap.set("v", "d", '"_d')
 
 -- ===============================
 --       WINDOW / TAB / SPLIT
