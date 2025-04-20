@@ -18,7 +18,6 @@ return {
 				"php",
 				"rust",
 				"ron",
-				"rust_with_rstml",
 				"scss",
 				"sql",
 				"svelte",
@@ -70,10 +69,11 @@ return {
 		"rayliwell/tree-sitter-rstml",
 		dependencies = { "nvim-treesitter" },
 		build = ":TSUpdate",
-		config = function()
+		config = function ()
 			require("tree-sitter-rstml").setup()
-		end,
+		end
 	},
+	-- Automatic tag closing and renaming (optional but highly recommended)
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()

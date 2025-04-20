@@ -10,7 +10,7 @@ RUN dnf install -y \
     make \
     zig \
     nodejs \
-    npm && \
+    npm tree && \
     dnf clean all
 
 RUN mkdir -p /root/.config/nvim
