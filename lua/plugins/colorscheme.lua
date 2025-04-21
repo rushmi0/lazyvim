@@ -9,6 +9,21 @@ return {
 			}
 		end,
 	},
+
+
+	{
+		"2giosangmitom/nightfall.nvim",
+		lazy = true,
+		priority = 1000,
+		opts = {
+
+		}, -- Add custom configuration here
+		config = function(_, opts)
+			require("nightfall").setup(opts)
+			vim.cmd("colorscheme nightfall") -- Choose from: nightfall, deeper-night, maron, nord
+		end,
+	},
+
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",

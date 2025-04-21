@@ -12,8 +12,16 @@ return {
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"css-lsp",
+				"pyright",
+				"taplo",
 			})
 		end,
+		keys = {
+			{
+				"<leader>gg",
+				false,
+			},
+		},
 	},
 
 	-- lsp servers
@@ -24,10 +32,29 @@ return {
 			---@type lspconfig.options
 			servers = {
 				cssls = {},
+				vtsls = { enabled = false },
 				tailwindcss = {
 					root_dir = function(...)
-						return require("lspconfig.util").root_pattern(".git")(...)
+						return require("lspconfig.util").root_pattern("tailwind.config.js")(...)
 					end,
+					-- exclude a filetype from the default_config
+					filetypes_exclude = { "markdown" },
+					-- add additional filetypes to the default_config
+					filetypes_include = { "rust" },
+					-- to fully override the default_config, change the below
+					-- filetypes = {}
+					init_options = {
+						userLanguages = {
+							rust = "html",
+							["*.rs"] = "html",
+						},
+						tailwindCSS = {
+							includeLanguages = {
+								rust = "html",
+								["*.rs"] = "html",
+							},
+						},
+					},
 				},
 				tsserver = {
 					root_dir = function(...)
@@ -60,6 +87,10 @@ return {
 					},
 				},
 				html = {},
+				phpactor = {
+					enabled = true,
+				},
+				gradle_ls = {},
 				yamlls = {
 					settings = {
 						yaml = {
