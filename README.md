@@ -51,30 +51,19 @@ Launch Neovim:
 
 ---
 
-## 🔁 Yank
+## 📋 Text Editing
 
-| Key   | Description     | Mode |
-|-------|-----------------|------|
-| `y`   | Yank/Copy       | n    |
-| `yiw` | Yank inner word | n    |
-
----
-
-## ↩️ Undo / Redo
-
-| Key       | Description | Mode |
-|-----------|-------------|------|
-| `u`       | Undo        | n    |
-| `<Ctrl>r` | Redo        | n    |
-
----
-
-## 📋 Paste
-
-| Key | Description         | Mode |
-|-----|---------------------|------|
-| `p` | Paste after cursor  | n/x  |
-| `P` | Paste before cursor | n    |
+| Key       | Description                        | Mode |
+|-----------|------------------------------------|------|
+| `<Alt>j`  | Move current/selected line(s) down | n/v  |
+| `<Alt>k`  | Move current/selected line(s) up   | n/v  |
+| `<Ctrl>c` | Toggle comment                     | n/v  |
+| `y`       | Yank/Copy                          | n    |
+| `yiw`     | Yank inner word                    | n    |
+| `u`       | Undo                               | n    |
+| `<Ctrl>r` | Redo                               | n    |
+| `p`       | Paste after cursor                 | n/x  |
+| `P`       | Paste before cursor                | n    |
 
 ---
 
