@@ -25,8 +25,8 @@ return {
                             max_file_size = 1024 * 1024,
                             error_sign = true,
                             -- animation related
-                            duration = 200,
-                            delay = 300,
+                            duration = 100,
+                            delay = 200,
                         },
 
                         indent = {
