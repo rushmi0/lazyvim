@@ -24,6 +24,21 @@ return {
                 table.insert(keys, { "<leader>tl", term_cmd("lazygit"), desc = "ToggleTerm lazygit", mode = "n" })
             end
 
+            if vim.fn.executable("node") == 1 then
+                table.insert(keys, { "<leader>tn", term_cmd("node"), desc = "ToggleTerm node", mode = "n" })
+            end
+
+            local python = vim.fn.executable("python") == 1 and "python"
+                    or (vim.fn.executable("python3") == 1 and "python3")
+            if python then
+                table.insert(keys, { "<leader>tp", term_cmd(python), desc = "ToggleTerm python", mode = "n" })
+            end
+
+            if vim.fn.executable("btm") == 1 then
+                table.insert(keys, { "<leader>tt", term_cmd("btm"), desc = "ToggleTerm btm", mode = "n" })
+            end
+
+
             return keys
         end,
         config = function()
@@ -37,5 +52,6 @@ return {
             })
         end,
     }
+
 
 }
