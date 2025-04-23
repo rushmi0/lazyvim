@@ -1,6 +1,6 @@
 services:
 
-  dotfile:
+  devenv:
     container_name: dotfile
     restart: unless-stopped
     build:

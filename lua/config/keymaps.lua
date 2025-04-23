@@ -110,25 +110,47 @@ keymap.set({ "n", "v" }, "<leader>x", "<ESC>:q<CR>", { desc = "Close" })
 keymap.set("n", "<leader>cw", "<cmd>cd %:p:h <CR>", { desc = "Set as working Dir" })
 keymap.set("n", "<leader>cW", "<cmd>lcd %:p:h <CR>", { desc = "Set local working Dir" })
 
+
+-- ===============================
+--            DAP MAPPINGS
+-- ===============================
+keymap.set("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+keymap.set("n", "<Leader>dj", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+keymap.set("n", "<Leader>dk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+keymap.set("n", "<Leader>dc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+keymap.set("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
+keymap.set(
+        "n",
+        "<Leader>dd",
+        "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+        { desc = "Debugger set conditional breakpoint" }
+)
+keymap.set("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+keymap.set("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
+
+-- rustaceanvim integration
+keymap.set("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
+
 -- ===============================
 --           LSP / DIAG
 -- ===============================
 
 keymap.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
+    vim.diagnostic.goto_next()
 end, opts)
 
 keymap.set("n", "<leader>]", function()
-	vim.diagnostic.goto_next()
+    vim.diagnostic.goto_next()
 end, { desc = "Go to Next Diagnostic" })
 
 keymap.set("n", "<leader>[", function()
-	vim.diagnostic.goto_prev()
+    vim.diagnostic.goto_prev()
 end, { desc = "Go to Previous Diagnostic" })
 
 -- Toggle inlay hints
 keymap.set("n", "<leader>i", function()
-	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle inlay_hint" })
 
 -- ===============================
@@ -137,12 +159,12 @@ end, { desc = "Toggle inlay_hint" })
 
 -- Replace hex with HSL
 keymap.set("n", "<leader>r", function()
-	require("craftzdog.hsl").replaceHexWithHSL()
+    require("craftzdog.hsl").replaceHexWithHSL()
 end)
 
 -- Toggle autoformat
 vim.api.nvim_create_user_command("ToggleAutoformat", function()
-	require("craftzdog.lsp").toggleAutoformat()
+    require("craftzdog.lsp").toggleAutoformat()
 end, {})
 
 -- Save with root permission

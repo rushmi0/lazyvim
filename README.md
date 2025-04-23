@@ -126,6 +126,24 @@ To enter Command Mode, press `Shift + :` while in Normal mode.
 
 ---
 
+## 🐞 Debugging (DAP)
+
+These key mappings use [nvim-dap](https://github.com/mfussenegger/nvim-dap) to debug your code:
+
+| Key          | Action                           | Mode |
+|--------------|----------------------------------|------|
+| `<Leader>dl` | Step into                        | n    |
+| `<Leader>dj` | Step over                        | n    |
+| `<Leader>dk` | Step out                         | n    |
+| `<Leader>dc` | Continue                         | n    |
+| `<Leader>db` | Toggle breakpoint                | n    |
+| `<Leader>dd` | Set conditional breakpoint       | n    |
+| `<Leader>de` | Terminate debugging              | n    |
+| `<Leader>dr` | Run last debug session           | n    |
+| `<Leader>dt` | Rust testable (via rustaceanvim) | n    |
+
+---
+
 ## 🗝️ Mode Abbreviations
 
 | Abbr | Description      |
