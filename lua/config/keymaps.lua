@@ -169,3 +169,8 @@ end, {})
 
 -- Save with root permission
 vim.api.nvim_create_user_command("W", "w !pkexec tee > /dev/null %", {})
+
+
+-- LazyGit toggle
+--keymap.set("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle lazygit", unpack(opts) })
+--keymap.set("n", "<leader>tl", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle lazygit", unpack(opts) })
