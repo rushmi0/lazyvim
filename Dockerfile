@@ -23,6 +23,7 @@ RUN dnf install -y \
     fontconfig \
     htop \
     btop \
+    mercurial \
     unzip && \
     dnf clean all
 
