@@ -19,6 +19,7 @@ RUN dnf install -y \
     nodejs \
     npm \
     tree \
+    fzf \
     fontconfig \
     htop \
     btop \
